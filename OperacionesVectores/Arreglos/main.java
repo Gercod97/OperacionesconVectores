@@ -32,6 +32,8 @@ public class main {
 
         }
 
+        boolean encontrado=false;
+
         
             
             System.out.println("Ingrese un número a buscar dentro del vector: ");
@@ -40,17 +42,19 @@ public class main {
             for ( int i=0; i<numerosEnteros.length; i++){
                 if (numerosEnteros[i]==valorBuscado) {
                     System.out.println("El numero ingresado está en la posición: "+ (i+1));
+                    encontrado=true;
                     break;
 
                     
                 
-                }
-
-                else System.out.println("El número ingresado no está dentro del vector");
-            
-                
+                }           
             
         }
+
+            if  (!encontrado) {
+                System.out.println("El número ingresado no se encuentra dentro del vector");
+                
+            }
 
 
             int valorMayor=numerosEnteros[0];
