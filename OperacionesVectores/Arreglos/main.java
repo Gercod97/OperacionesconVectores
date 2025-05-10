@@ -53,7 +53,7 @@ public class main {
 
             if  (!encontrado) {
                 System.out.println("El número ingresado no se encuentra dentro del vector");
-                
+
             }
 
 
@@ -94,6 +94,26 @@ public class main {
                 
             }
             System.out.println("La suma de los valores del vector es: " +sumaVector);
+
+            System.out.println("Ingrese un número entero: ");
+            int x = scan.nextInt();
+
+            boolean  encontrar=false;
+
+            for(int numero:numerosEnteros) {
+                if (numero%x==0) {
+                    System.out.println("El numero " + numero + " es multiplo de " + x);
+                    encontrar=true;
+                    }
+
+                }
+
+            if (!encontrar) {
+                
+                System.out.println("No se encontró ningún múltiplo de " + x + " dentro del vector");
+                
+                }
+            
 
 
         scan.close();
