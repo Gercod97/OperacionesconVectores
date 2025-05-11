@@ -113,6 +113,61 @@ public class main {
                 System.out.println("No se encontró ningún múltiplo de " + x + " dentro del vector");
                 
                 }
+
+        int promedioNumerosEnteros = sumaVector/numerosEnteros.length;
+
+            System.out.println("El promedio de los valores ingresados es: " + promedioNumerosEnteros);
+
+
+            // Vector con valores por encima del promedio 
+
+            int contador=0;
+            for (int num: numerosEnteros) {
+                if (num>promedioNumerosEnteros) {
+                    contador++;
+                }
+            }
+
+            if (contador>0) {
+                int[] mayores = new int[contador];
+                int index =0;
+                for (int num:numerosEnteros) {
+                    if (num>promedioNumerosEnteros) {
+                        mayores[index++] =num;
+                        
+                    }
+
+                }
+
+                System.out.println("Numeros mayores que el promedio " +promedioNumerosEnteros+ " : ");
+
+                for (int num:mayores){
+
+                    System.out.println(num);
+                }
+
+                System.out.println("Cantidad de números por encima del promedio:  " +mayores.length);
+
+
+            }
+            else {
+                System.out.println("No hay numeros mayores que el promedio: " + promedioNumerosEnteros);
+            }
+
+
+
+
+
+        
+
+            
+
+
+
+
+
+
+
             
 
 
